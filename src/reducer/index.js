@@ -39,7 +39,7 @@ const initialCalendarState = {
 }
 
 function calender (state = initialCalendarState , action) {
-    const { day, receipe, meal} = action
+    const { day, recipe, meal} = action
 
     switch(action.type){
         case ADD_RECIPE:
@@ -49,7 +49,7 @@ function calender (state = initialCalendarState , action) {
                 //modify
                 [day]: {
                     ...state[day],
-                    [meal]:receipe.label,
+                    [meal]:recipe.label,
                 }
             }
         case REMOVE_FROM_CALENDER:
